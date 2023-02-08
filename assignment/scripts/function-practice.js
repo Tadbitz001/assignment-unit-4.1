@@ -73,7 +73,11 @@ function getLast( array ) {
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  for (let i = 0; i <array.length; i++){
+    if (array[i] === value) {
+      return true;
+    } else return false;
+  }
 }
 
 // ----------------------
@@ -82,8 +86,15 @@ function find( value, array ){
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
+  let capLetter = letter.toUpperCase();
+  let capString = string.toUpperCase();
+  if (capString.split(' ')[0].split('')[0] === capLetter){
+      return true;
+    } else return false;
+  }
+console.log(isFirstLetter('a', 'Apple'))
+console.log(isFirstLetter('z', 'apple'))
 
-}
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
@@ -103,3 +114,8 @@ function sumAll( ) {
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+
+
+//if (string.split(' ')[0].split('')[0] === letter){
+//    if (string[0].toUppercase() === letter.toUppercase()){
