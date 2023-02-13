@@ -121,13 +121,39 @@ function posSumArray(inputArray) {
       positiveNum.push(inputArray[i]);
     }
   }
-  return (positiveNum.length === 0) ? [] : positiveNum;
+  if (positiveNum.length ===0){
+    return [];
+  } else {
+    return positiveNum;
+  }
+  
+  //return (positiveNum.length === 0) ? [] : positiveNum;
 }
 let inputArray = [2,0,-3,-6,10,23];
 console.log(posSumArray(inputArray));
 
-
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+
+//Vowel Count
+//Return the number (count) of vowels in the given string.
+//We will consider a, e, i, o, u as vowels for this Kata (but not y).
+///The input string will only consist of lower case letters and/or spaces.
+
+function vowelCount (string){
+let counter = 0;
+let vowels = "aeiou";
+
+for (let i=0; i<string.length; i ++) {
+  if (vowels.indexOf(string[i])> -1);{
+    counter++;
+  }
+}
+return "This string has " + counter + " vowels.";
+}
+
+vowelCount("This is a string with how many vowels?");
+
 
